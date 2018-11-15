@@ -1,0 +1,104 @@
+|-- app
+     |-- modules
+       |-- home
+           |-- [+] components
+           |-- [+] pages
+           |-- home-routing.module.ts
+           |-- home.module.ts
+     |-- core
+       |-- [+] authentication
+       |-- [+] footer
+       |-- [+] guards
+       |-- [+] http
+       |-- [+] interceptors
+       |-- [+] mocks
+       |-- [+] services
+       |-- [+] header
+       |-- core.module.ts
+       |-- ensureModuleLoadedOnceGuard.ts
+       |-- logger.service.ts
+     |
+     |-- shared
+          |-- [+] components
+          |-- [+] directives
+          |-- [+] pipes
+     |
+     |-- [+] configs
+|-- assets
+     |-- scss
+          |-- [+] partials
+          |-- _base.scss
+          |-- styles.scss
+
+
+1. Modular Structure
+|-- modules
+       |-- home
+           |-- components
+           |-- pages
+           |    |-- home
+           |         |-- home.component.ts|html|scss|spec
+           |
+           |-- home-routing.module.ts
+           |-- home.module.ts
+
+
+2. Core Structure
+|-- core
+       |-- [+] authentication
+       |-- [+] footer
+       |-- [+] guards
+       |-- [+] http
+       |-- [+] interceptors
+       |-- [+] mocks
+       |-- [+] services
+       |-- [+] header
+       |-- core.module.ts
+       |-- ensureModuleLoadedOnceGuard.ts
+       |-- logger.service.ts
+
+       |-- header
+            |-- header.component.ts|html|scss|spec.ts
+       |-- footer
+            |-- footer.component.ts|html|scss|spec.ts
+
+
+3. HTTP Services
+|-- http
+     |-- user
+          |-- user.service.ts|spec.ts
+     |-- api.service.ts|spec.ts
+
+     |-- interceptors
+            |-- api-prefix.interceptor.ts
+            |-- error-handler.interceptor.ts
+            |-- http.token.interceptor.ts
+
+
+4. Guards
+|-- guards
+     |-- auth.guard.ts
+     |-- no-auth-guard.ts
+     |-- admin-guard.ts
+
+
+5. Services
+|-- services
+     |-- srv1.service.ts|spec.ts
+     |-- srv2.service.ts|spec.ts
+
+
+6. Share modules
+|-- shared
+     |-- [+] components
+     |-- [+] directives
+     |-- [+] pipes
+
+     |-- components
+         |-- loader
+                |-- loader.component.ts|html|scss|spec.ts
+         |-- buttons
+         |-- favorite-button
+                |-- favorite-button.component.ts|html|scss|spec.ts
+                |-- collapse-button
+                |-- collapse-button.component.ts|html|scss|spec.ts
